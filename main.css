@@ -372,7 +372,7 @@ body {
 @media (width <= 56.25em) {
   .hero-container {
     flex-direction: column;
-    text-align: center;
+    /* text-align: center; */
   }
 }
 
@@ -381,7 +381,7 @@ body {
 
 .bagde {
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
   font-family: Lato;
   line-height: 2.16rem;
   background-color: #00a8591a;
