@@ -283,7 +283,7 @@ body {
   width: 100%;
   color: var(--color-white);
   cursor: pointer;
-  background-color: #258265;
+  background-color: #0089d6;
   border: none;
   outline: none;
   border-radius: 0.8rem;
@@ -469,6 +469,7 @@ body {
   border: 1px solid #cccccc80;
   padding: 3rem;
   border-radius: 16px;
+  max-width: 40rem;
 }
 
 .form-container__header {
