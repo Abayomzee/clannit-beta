@@ -147,9 +147,11 @@ body {
 
 /* -- headings */
 .h-1 {
-  font-size: 5.6rem;
+  font-size: clamp(3rem, 4vw, 5.6rem);
+  /* font-size: 5.6rem; */
   font-weight: 700;
-  line-height: 6.72rem;
+  line-height: clamp(4.12rem, 6vw, 6.72rem);
+  /* line-height: 6.72rem; */
   color: var(--color-black);
 }
 
@@ -361,6 +363,11 @@ body {
   background-size: cover;
   background-position: top left;
   background-repeat: no-repeat;
+}
+@media (width <= 56.25em) {
+  .hero {
+    padding-block: 3rem;
+  }
 }
 
 .hero-container {
