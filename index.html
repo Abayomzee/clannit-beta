@@ -40,6 +40,28 @@
     />
   </head>
   <body>
+    <!-- Modal -->
+    <div class="overlay">
+      <div class="modal">
+        <div class="modal-container">
+          <div class="modal-top">
+            <button class="btn-color-modal" id="close-modal-button">
+              <img src="./assets/close-icon.svg" alt="" />
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="./assets/confirm-icon.svg" alt="" />
+            <h4 class="text-center h-11 mt-25">Registration Successful!</h4>
+            <p class="text-center p-5 mt-10">
+              Thank you for joining beta. You will receive an email when the
+              build is ready for tests.
+            </p>
+            <button class="btn btn-1 btn-2 mt-30">Proceed</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Nav -->
     <nav class="top-nav">
       <div class="center top-nav-container">
@@ -184,7 +206,9 @@
               <h4 class="h-2">Confirm Interest</h4>
             </div>
 
-            <button class="btn btn-1 mt-30">I’m Interested</button>
+            <button class="btn btn-1 mt-30" id="open-modal-button">
+              I’m Interested
+            </button>
           </div>
         </div>
         <div class="main-layout__right">
@@ -193,7 +217,9 @@
               <h4 class="h-2">Confirm Interest</h4>
             </div>
 
-            <button class="btn btn-1 mt-30">I’m Interested</button>
+            <button class="btn btn-1 mt-30" id="open-modal-button">
+              I’m Interested
+            </button>
           </div>
         </div>
       </div>
@@ -264,5 +290,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="main.js"></script>
+</body>
   </body>
 </html>
