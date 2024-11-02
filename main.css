@@ -166,10 +166,13 @@ body {
 }
 
 .h-3 {
-  font-size: 4rem;
+  /* font-size: 4rem; */
   font-weight: 700;
-  line-height: 4.8rem;
+  /* line-height: 4.8rem; */
   color: var(--color-black);
+
+  font-size: clamp(3rem, 4vw, 4rem);
+  line-height: clamp(4.12rem, 6vw, 4.8rem);
 }
 
 .h-4 {
@@ -207,10 +210,10 @@ body {
 }
 
 .h-7 {
-  font-size: 3.2rem;
   font-weight: 700;
-  line-height: 4.16rem;
   color: var(--color-black);
+  font-size: clamp(2.8rem, 4vw, 3.2rem);
+  line-height: clamp(3.5rem, 6vw, 4.16rem);
 }
 
 .h-8 {
@@ -431,6 +434,11 @@ body {
   padding-top: 5rem;
   padding-bottom: 10rem;
 }
+@media (width <= 56.25em) {
+  .main-section {
+    padding-bottom: 5rem;
+  }
+}
 
 .main-layout {
   display: flex;
@@ -440,7 +448,7 @@ body {
 @media (width <= 56.25em) {
   .main-layout {
     flex-direction: column-reverse;
-    gap: 0rem;
+    gap: 5rem;
   }
 }
 
@@ -450,6 +458,11 @@ body {
 .main-layout__right {
   flex-basis: 40rem;
   flex-shrink: 0;
+}
+@media (width <= 56.25em) {
+  .main-layout__right {
+    flex-basis: auto;
+  }
 }
 
 .form-container {
