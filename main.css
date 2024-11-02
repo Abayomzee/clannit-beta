@@ -655,7 +655,7 @@ body {
 .overlay {
   opacity: 0;
   visibility: hidden;
-  transition: visibility 0.5s ease;
+  transition: visibility 0.3s ease;
 }
 
 /* Modal element initial state */
@@ -663,7 +663,7 @@ body {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-30px); /* Start position for swipe down effect */
-  transition: visibility 0.5s ease;
+  transition: visibility 0.3s ease;
 }
 
 /* Animation to fade in overlay */
@@ -698,37 +698,21 @@ body {
   }
 }
 
-/* Animation to fade out and swipe up modal */
-@keyframes fadeOutSwipeUp {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-}
-
 /* Show overlay with fade-in effect */
 .show-overlay-animation {
   visibility: visible;
-  animation: fadeIn 0.5s ease forwards;
+  animation: fadeIn 0.5s ease forwards; /* Fade in over 0.5s */
 }
 
 /* Hide overlay with fade-out effect */
 .hide-overlay-animation {
   animation: fadeOut 0.5s ease forwards;
-  animation-delay: 0.2s; /* Delay overlay fade out until modal starts to close */
+  visibility: hidden; /* Delays hiding until fade out completes */
 }
 
 /* Show modal with fade-in and swipe down effect */
 .show-modal-animation {
   visibility: visible;
-  animation: fadeInSwipeDown 0.6s ease forwards 0.1s; /* Slight delay after overlay appears */
+  animation: fadeInSwipeDown 0.6s ease forwards 0.2s; /* Delay modal to start after overlay */
 }
 
-/* Hide modal with fade-out and swipe up effect */
-.hide-modal-animation {
-  animation: fadeOutSwipeUp 0.6s ease forwards;
-}

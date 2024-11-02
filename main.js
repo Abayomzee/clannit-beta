@@ -21,17 +21,14 @@ const closeButton = document.querySelector("#close-modal-button");
 // Add animation class to overlay and modal when open button is clicked
 openButton.forEach((btn) => {
   btn.addEventListener("click", () => {
+    console.log("Clicked");
     overlay.classList.add("show-overlay-animation");
     modal.classList.add("show-modal-animation");
-    overlay.classList.remove("hide-overlay-animation");
-    modal.classList.remove("hide-modal-animation");
   });
 });
 
 // Remove animation class from overlay and modal when close button is clicked
 closeButton.addEventListener("click", () => {
-  overlay.classList.add("hide-overlay-animation");
-  modal.classList.add("hide-modal-animation");
   overlay.classList.remove("show-overlay-animation");
   modal.classList.remove("show-modal-animation");
 });
