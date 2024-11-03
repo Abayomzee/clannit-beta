@@ -1,297 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="main.css" />
-    <title>Clannit | Beta</title>
+    <style>
+      /* Import Google Font */
+      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap");
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap"
-      rel="stylesheet"
-    />
+      /* General styling for the email */
+      body {
+        font-family: "IBM Plex Sans", Arial, sans-serif;
+        color: #333333;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      .main-body {
+        padding: 20px;
+      }
+      .email-container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        /* padding: 20px; */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      h3 {
+        color: #000000;
+        font-size: 24px;
+        margin-top: 0;
+      }
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #555555;
+      }
+      h5 {
+        font-size: 18px;
+        color: #333333;
+        margin-bottom: 10px;
+      }
+      ul {
+        padding-left: 20px;
+        color: #333333;
+      }
+      ul li {
+        margin-bottom: 8px;
+      }
+      .button {
+        display: inline-block;
+        background-color: #0089d6;
+        color: #ffffff;
+        padding: 12px 20px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        margin-top: 20px;
+        font-size: 16px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .footer {
+        text-align: center;
+        font-size: 14px;
+        color: #888888;
+        padding-top: 20px;
+        border-top: 1px solid #eeeeee;
+      }
 
-    <!-- font 2 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+      .margin-0 {
+        margin: 0;
+      }
 
-    <!-- font 3 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+      .main-footer {
+        background-color: #fafafa;
+        padding: 25px;
+        margin-top: 25px;
+      }
 
-    <!-- font 4 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
+      .footer-link {
+        color: #3964ea;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+      }
+
+      /* Responsive styling */
+      @media (max-width: 600px) {
+        .email-container {
+          padding: 15px;
+        }
+        h3 {
+          font-size: 22px;
+        }
+        h5 {
+          font-size: 16px;
+        }
+        .button {
+          font-size: 14px;
+          padding: 10px 15px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <!-- Modal -->
-    <div class="overlay">
-      <div class="modal">
-        <div class="modal-container">
-          <div class="modal-top">
-            <button class="btn-color-modal" id="close-modal-button">
-              <img src="./assets/close-icon.svg" alt="" />
-            </button>
-          </div>
-          <div class="modal-body">
-            <img src="./assets/confirm-icon.svg" alt="" />
-            <h4 class="text-center h-11 mt-25">Registration Successful!</h4>
-            <p class="text-center p-5 mt-10">
-              Thank you for joining beta. You will receive an email when the
-              build is ready for tests.
-            </p>
-            <button class="btn btn-1 btn-2 mt-30">Proceed</button>
+    <div class="email-container">
+      <!-- Header image -->
+      <img
+        src="./email-header.png"
+        alt="Clannit 5.0"
+        width="100%"
+        style="border-radius: 8px 8px 0 0"
+      />
+
+      <!-- Main content -->
+      <div class="main-body">
+        <h3>Experience the Future with Clannit 5.0 – Join Our Beta Test!</h3>
+        <p>Hey Martha,</p>
+        <p>
+          Get ready for Clannit 5.0 - a whole new level of connection,
+          convenience, and control! This exciting update is packed with updates
+          to guest invitation as well as new, powerful features like Event
+          Management and Vendor Listing, all wrapped in a sleek, intuitive
+          design.
+        </p>
+        <p>
+          As one of our valued users, we invite you to be among the first to
+          explore Clannit 5.0. Your feedback will play a crucial role in
+          refining the final version and making sure Clannit 5.0 is everything
+          you need.
+        </p>
+
+        <!-- Benefits list -->
+        <h5>As a beta tester, you will have the chance to:</h5>
+        <ul>
+          <li>
+            Experience new features: Get early access to our upcoming features
+            before it’s officially released.
+          </li>
+          <li>
+            Provide valuable feedback: Share your insights and help us improve
+            the user experience.
+          </li>
+          <li>
+            Connect with our team: Engage with our developers and share your
+            thoughts directly.
+          </li>
+        </ul>
+
+        <p>
+          If you're interested, please click on the button below to find out
+          more and express your interest.
+        </p>
+
+        <p class="margin-0">Best regards,</p>
+        <p class="margin-0">The Clannit Team</p>
+
+        <!-- Call to action button -->
+        <a href="https://clannit.com/beta-test" class="button"
+          >I’m Interested</a
+        >
+
+        <!-- Footer -->
+        <div class="footer">
+          <!-- Optional footer image -->
+          <img
+            src="./email-img.png"
+            alt="Footer Image"
+            width="100%"
+            style="margin-top: 20px; border-radius: 0 0 8px 8px"
+          />
+        </div>
+
+        <div class="main-footer">
+          <p class="margin-0">
+            Need help?
+            <a href="#" class="footer-link">Contact our support team</a> or no
+            longer interested in our newsletters?
+            <a href="#" class="footer-link">Unsubscribe here.</a> Want to give
+            us feedback? Let us know what you think on our
+            <a href="#" class="footer-link">feedback site.</a>
+          </p>
+
+          <div style="margin-top: 40px">
+            <a
+              href="https://facebook.com/clannit"
+              style="margin-right: 10px; text-decoration: none"
+            >
+              <img
+                src="./fb.png"
+                alt="Facebook"
+                width="24"
+                height="24"
+                style="vertical-align: middle"
+              />
+            </a>
+            <a
+              href="https://twitter.com/clannit"
+              style="margin-right: 10px; text-decoration: none"
+            >
+              <img
+                src="./twit.png"
+                alt="Twitter"
+                width="24"
+                height="24"
+                style="vertical-align: middle"
+              />
+            </a>
+            <a
+              href="https://instagram.com/clannit"
+              style="margin-right: 10px; text-decoration: none"
+            >
+              <img
+                src="./insta.png"
+                alt="Instagram"
+                width="24"
+                height="24"
+                style="vertical-align: middle"
+              />
+            </a>
+            <a
+              href="https://linkedin.com/company/clannit"
+              style="text-decoration: none"
+            >
+              <img
+                src="./link.png"
+                alt="LinkedIn"
+                width="24"
+                height="24"
+                style="vertical-align: middle"
+              />
+            </a>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Nav -->
-    <nav class="top-nav">
-      <div class="center top-nav-container">
-        <a href="#">
-          <img src="./assets/logo.svg" alt="" />
-        </a>
-
-        <div class="top-nav__links">
-          <a href="#" class="l-1">Home</a>
-          <a href="#" class="l-1">About</a>
-          <a href="#" class="l-1">Features</a>
-          <a href="#" class="l-1">Contact</a>
-          <a href="#" class="l-1">Resources</a>
-
-          <div class="top-nav__links top-nav__ctas">
-            <a href="#" class="l-2">Sign up</a>
-            <a href="#" class="l-3">Login</a>
-          </div>
-        </div>
-
-        <button class="btn mobile-menu-cta">
-          <img src="./assets/menu-icon.svg" alt="" />
-        </button>
-      </div>
-    </nav>
-
-    <!-- Header -->
-    <header class="hero">
-      <div class="center hero-container">
-        <div class="hero-left">
-          <h3 class="h-1 mb-20">Join the Clannit Beta Testing Program</h3>
-          <p class="p-1 max-width-557 mb-40">
-            Be among the first to experience the future of community management
-            with Clannit! Join our beta testing program and help us build a
-            platform that better serves communities like yours.
-          </p>
-
-          <!-- <span class="bagde"
-            >To be Released on Friday 1st November 2024 !</span
-          > -->
-        </div>
-        <div class="hero-image-container">
-          <img src="./assets/thumbnail-4.png" alt="" />
-        </div>
-      </div>
-    </header>
-
-    <!-- Body -->
-    <main class="main-section">
-      <div class="center main-layout">
-        <div class="main-layout__left">
-          <h4 class="h-3 mb-20">What its about</h4>
-          <p class="p-2 mb-10">
-            Clannit is revolutionizing community interaction and management. Our
-            platform provides tools for effortless communication, secure access
-            control, smooth event planning, and more. By joining our beta
-            testing, you’ll play a critical role in refining these features,
-            ensuring they meet real-world needs.
-          </p>
-          <p class="p-2">
-            As a Clannit beta tester, your feedback will directly influence our
-            final product. Test each feature, let us know what works, and
-            suggest improvements. Whether it's new feature ideas or refining
-            existing ones, your insights are invaluable to us!
-          </p>
-
-          <div class="captioned-img mt-50">
-            <div class="thumbnail">
-              <img src="./assets/thumbnail-3.png" alt="" />
-            </div>
-            <!-- <h6 class="h-4 mt-5">Image caption goes here</h6> -->
-          </div>
-
-          <!--  -->
-          <h4 class="h-3 mt-50">What to Expect in the Beta</h4>
-          <p class="p-3 mt-5 mb-20">
-            During the beta, you’ll experience a wide range of improvements on
-            old features and some exciting new innovations, including: 
-          </p>
-
-          <div style="padding-left: 3rem">
-            <ul>
-              <li class="mb-10">
-                <p class="p-2">
-                  <b>Access Control:</b> Securely manage who enters your
-                  community spaces.
-                </p>
-              </li>
-              <li class="mb-10">
-                <p class="p-2">
-                  <b> Event Management:</b> Plan, organize, and invite others to
-                  your events. Buy event tickets and sell merchandise such as
-                  asọ ẹbí for your events also!
-                </p>
-              </li>
-              <li class="mb-10">
-                <p class="p-2">
-                  <b>Vendor Marketplace:</b> Connect with trusted local vendors.
-                </p>
-              </li>
-              <li class="mb-10">
-                <p class="p-2">
-                  <b> Digital Collections:</b> Seamlessly handle invoicing,
-                  payments, including statement of accounts, and dunning
-                  messages relating to your community.
-                </p>
-              </li>
-              <li class="mb-10">
-                <p class="p-2">
-                  <b> Community Communication:</b> Keep everyone informed and
-                  engaged in an exciting secure feed limited to you and your
-                  community members.
-                </p>
-              </li>
-            </ul>
-          </div>
-          <p class="p-2 mt-20">
-            Each feature is designed to make community life simpler, safer, and
-            more connected.
-          </p>
-
-          <!-- 2 -->
-
-          <div class="captioned-img mt-50">
-            <div class="thumbnail">
-              <img src="./assets/thumbnail-5.png" alt="" />
-            </div>
-            <!-- <h6 class="h-4 mt-5">Image caption goes here</h6> -->
-          </div>
-
-          <!-- 3 -->
-          <h4 class="h-7 mt-50 mb-10">Ready to Join the Beta?</h4>
-          <p class="p-3">
-            Sign up below to register your interest in the Clannit beta testing
-            program. Selected participants will receive exclusive early access
-            and have a direct line to our team for feedback. Help shape the
-            platform that’s redefining community experiences!
-          </p>
-
-          <div class="form-container mt-50">
-            <div class="form-container__header">
-              <h4 class="h-2">Confirm Interest</h4>
-            </div>
-
-            <button class="btn btn-1 mt-30" id="open-modal-button">
-              I’m Interested
-            </button>
-          </div>
-        </div>
-        <div class="main-layout__right">
-          <div class="form-container form-container__right ">
-            <div class="form-container__header">
-              <h4 class="h-2">Confirm Interest</h4>
-            </div>
-
-            <button class="btn btn-1 mt-30" id="open-modal-button">
-              I’m Interested
-            </button>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="center">
-        <div class="footer-top">
-          <div>
-            <h4 class="h-9 mb-35">Connect with us:</h4>
-            <p class="p-4 mt-10">Contact us at: support@clannit.com</p>
-            <p class="p-4 mt-10">Call us: +234 9011485659</p>
-            <p class="p-4 mt-10 max-width-500">
-              Visit us: 3b Badagry Street, Off Abba Johnson, Adeniyi Jones
-              Avenue, Ikeja, Lagos
-            </p>
-          </div>
-          <div class="footer-top__links">
-            <div>
-              <h6 class="h-10 mb-20">Channels</h6>
-              <div class="footer-top__links-container">
-                <a href="#" class="l-4">Home</a>
-                <a href="#" class="l-4">About</a>
-                <a href="#" class="l-4">Features</a>
-                <a href="#" class="l-4">Contact</a>
-                <a href="#" class="l-4">Resources</a>
-              </div>
-            </div>
-            <div>
-              <h6 class="h-10 mb-20">Resources</h6>
-              <div class="footer-top__links-container">
-                <a href="#" class="l-4">Knowledge Base</a>
-                <a href="#" class="l-4">F.A.Q</a>
-                <a href="#" class="l-4">Manuals</a>
-                <a href="#" class="l-4">Videos</a>
-              </div>
-            </div>
-            <div>
-              <h6 class="h-10 mb-20">Follow Us</h6>
-              <div class="footer-top__links-container">
-                <a href="#" class="l-4 l-5">
-                  <img src="./assets/facebook-icon.svg" alt="logo" />
-                  Facebook</a
-                >
-                <a href="#" class="l-4 l-5">
-                  <img src="./assets/instagram-icon.svg" alt="logo" />
-                  Instagram</a
-                >
-                <a href="#" class="l-4 l-5">
-                  <img src="./assets/twitter-icon.svg" alt="logo" /> Twitter</a
-                >
-                <a href="#" class="l-4 l-5">
-                  <img src="./assets/linkedIn-icon.svg" alt="logo" />
-                  LinkedIn</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <h6 class="h-8">© 2024 Clannit. All rights reserved.</h6>
-          <div class="footer-bottom__links">
-            <a href="#" class="l-4">Privacy Policy</a>
-            <a href="#" class="l-4">Terms of Service</a>
-            <a href="#" class="l-4">Cookies Settings</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script src="main.js"></script>
-</body>
   </body>
 </html>
