@@ -42,11 +42,17 @@ body {
 }
 
 /* Utilities */
+.max-width-888 {
+  max-width: 88.8rem;
+}
 .max-width-557 {
   max-width: 55.7rem;
 }
 .max-width-500 {
   max-width: 50rem;
+}
+.max-width-369 {
+  max-width: 36.9rem;
 }
 
 .text-center {
@@ -74,6 +80,9 @@ body {
 }
 .mt-20 {
   margin-top: 2rem;
+}
+.mt-15 {
+  margin-top: 1.5rem;
 }
 .mt-10 {
   margin-top: 1rem;
@@ -256,6 +265,58 @@ body {
   color: var(--color-4);
 }
 
+.h-12 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 3.36rem;
+  color: var(--color-white);
+}
+
+.h-13 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+  color: #258265;
+}
+
+.h-14 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4.8rem;
+}
+
+.h-15 {
+  font-size: clamp(2.5rem, 4vw, 4.8rem);
+  font-weight: 700;
+  line-height: clamp(3.12rem, 6vw, 5.76rem);
+}
+
+.h-16 {
+  font-size: clamp(2.4rem, 4vw, 4.5rem);
+  font-weight: 700;
+  line-height: clamp(3.12rem, 6vw, 5.76rem);
+}
+
+.h-17 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.h-18 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 4.16rem;
+  color: var(--color-white);
+}
+
+.h-19 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.7rem;
+  color: var(--color-white);
+}
+
 /* -- paragraphs */
 .p-1 {
   font-size: 1.8rem;
@@ -293,6 +354,28 @@ body {
   color: var(--color-3);
 }
 
+.p-6 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 2.4rem;
+  color: var(--color-white);
+}
+
+.p-7 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 3.2rem;
+  color: #2a2a2a;
+}
+
+.p-8 {
+  color: #ffffff;
+
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.7rem;
+}
+
 /* Buttons */
 .btn {
 }
@@ -327,6 +410,29 @@ body {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.contact-btn {
+  border: 1px solid #000000;
+  background-color: transparent;
+  border-radius: 0.4rem;
+  padding: 1.2rem 2.4rem;
+
+  font-family: Roboto;
+  font-size: 1.6rem;
+  font-weight: 400;
+  cursor: pointer;
+  outline: none;
+  transition: 0.4s;
+}
+
+.contact-btn:hover {
+  transform: translateY(-0.5rem);
+}
+
+.contact-btn:active {
+  outline: none;
+  transform: scale(0.9);
 }
 
 /* Layout */
@@ -397,10 +503,6 @@ body {
 /* -- Hero */
 .hero {
   padding-block: 10rem;
-  background-image: url("./assets/bg.png");
-  background-size: cover;
-  background-position: top left;
-  background-repeat: no-repeat;
 }
 @media (width <= 56.25em) {
   .hero {
@@ -424,6 +526,24 @@ body {
 .hero-left {
 }
 
+.hero-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-icon {
+  border-radius: 0.8rem;
+  background-color: #000000;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.5rem 2rem;
+}
+
 .bagde {
   font-weight: 700;
   font-size: clamp(1.3rem, 3vw, 1.8rem);
@@ -432,9 +552,20 @@ body {
   background-color: #00a8591a;
   color: #00a859;
 
-  padding: 12px 20px;
+  padding: 1.2rem 2rem;
 
   border-radius: 4px;
+}
+
+.bagde-2 {
+  font-family: Dosis;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  color: #258265;
+  background-color: #dee7e6;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
 }
 
 .hero-image-container {
@@ -466,7 +597,7 @@ body {
 /* -- Main */
 .main-section {
   padding-top: 5rem;
-  padding-bottom: 10rem;
+  /* padding-bottom: 10rem; */
 }
 @media (width <= 56.25em) {
   .main-section {
@@ -474,48 +605,143 @@ body {
   }
 }
 
-.main-layout {
+.things-to-explore__section {
+  background-color: #258265;
+  padding-block: 8rem;
+}
+
+.things-to-explore {
   display: flex;
   justify-content: space-between;
-  gap: 10rem;
+  gap: 4rem;
+}
+
+@media (width <= 1050px) {
+  .things-to-explore {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+.features__section {
+  padding-block: 8.5rem;
+}
+
+.feature_lists {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (width <= 778px) {
+  .feature_lists {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+.feature_cta {
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 1rem 1.7rem;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 0.8rem;
+}
+
+.feature_cta.active {
+  background-color: #258265;
+  font-family: Dosis;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.feature_cta:hover {
+  /* background-color: #25826516; */
+}
+
+.feature__content {
+  padding-top: 6rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
 }
 @media (width <= 56.25em) {
-  .main-layout {
-    flex-direction: column-reverse;
+  .feature__content {
+    flex-direction: column;
+    /* text-align: center; */
+  }
+}
+
+.faq__section {
+  padding-block: 5rem;
+  padding-bottom: 12rem;
+}
+
+.faq_section__layout {
+  display: flex;
+  gap: 8rem;
+}
+@media (width <= 1000px) {
+  .faq_section__layout {
+    flex-wrap: wrap;
     gap: 5rem;
   }
 }
 
-.main-layout__left {
+.faq_section__layout > div {
+  flex-basis: 50%;
 }
-
-.main-layout__right {
-  flex-basis: 40rem;
-  flex-shrink: 0;
-}
-@media (width <= 56.25em) {
-  .main-layout__right {
-    flex-basis: auto;
+@media (width <= 1000px) {
+  .faq_section__layout > div {
+    flex-basis: 100%;
   }
 }
 
-.form-container {
-  border: 1px solid #cccccc80;
-  padding: 3rem;
-  border-radius: 16px;
-  max-width: 40rem;
+.faq_section__left {
+}
+.faq_section__right {
 }
 
-.form-container__right {
-  position: sticky;
-  top: 2rem;
+.faq__toggler {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  border: 1px solid #d6ddeb;
+  padding: 2rem 2.4rem;
+  background-color: transparent;
+  border-radius: 0.8rem;
+  cursor: pointer;
+
+  font-family: Dosis;
+  font-size: 18px;
+  font-weight: 700;
 }
 
-.form-container__header {
-  padding-bottom: 2.5rem;
-  border-bottom: 1px solid #cccccc;
+.faq__answer {
+  background-color: #f9faff;
+  padding: 1.6rem;
 }
 
+.join-beta__section {
+  background-color: #258265;
+  padding-block: 8rem;
+}
+
+.join-beta__layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*  */
 .input-label {
   font-family: Dosis;
   font-size: 1.4rem;
