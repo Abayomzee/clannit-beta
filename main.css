@@ -424,6 +424,8 @@ body {
   cursor: pointer;
   outline: none;
   transition: 0.4s;
+
+  color: #000000;
 }
 
 .contact-btn:hover {
@@ -650,6 +652,7 @@ body {
   cursor: pointer;
   transition: 0.4s;
   border-radius: 0.8rem;
+  color: #000000;
 }
 
 .feature_cta.active {
@@ -707,6 +710,12 @@ body {
 .faq_section__right {
 }
 
+.faqs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
 .faq__toggler {
   display: flex;
   align-items: center;
@@ -718,10 +727,23 @@ body {
   background-color: transparent;
   border-radius: 0.8rem;
   cursor: pointer;
+  line-height: 2.7rem;
 
   font-family: Dosis;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 700;
+
+  color: #000000;
+  text-align: left;
+}
+
+.faq__toggler span:first-child {
+  text-align: left;
+}
+
+.faq__toggler span:nth-child(2) {
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .faq__answer {
