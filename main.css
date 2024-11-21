@@ -544,6 +544,8 @@ body {
   align-items: center;
   gap: 0.8rem;
   padding: 1.5rem 2rem;
+
+  text-decoration: none;
 }
 
 .bagde {
